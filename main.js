@@ -48,6 +48,7 @@ function createTodoApp(element, todos = []) {
   listElem.addEventListener('dblclick', (e) => {
     const todoElem = e.target.closest('.todo-app__item');
     const todoId = +todoElem.dataset.id;
+
     todos = todos.filter(todo => todo.id !== todoId);
     todoElem.remove();
 
@@ -62,6 +63,7 @@ function createTodoApp(element, todos = []) {
 
   function updateInfo() {
     const unfinishedTodos = todos.filter(todo => !todo.completed);
+    
     infoElem.innerHTML = `Items left ${unfinishedTodos.length} of ${todos.length}`;
   }
 
