@@ -1,4 +1,42 @@
-ul {
+body {
+  background-color: azure;
+}
+
+h1 {
+  font-size: 38px;
+  text-align: center;
+  margin-top: 50px;
+  color: rgb(164, 77, 245);
+}
+
+.todo-app {
+  width: 300px;
+  border: 3px solid blueviolet;
+  border-radius: 10px;
+  padding: 50px;
+  margin: 50px auto;
+}
+
+.todo-app__field {
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+}
+
+.todo-app__list {
   list-style: none;
   padding: 0;
+  margin-top: 30px;
+}
+
+.todo-app__item {
+  font-size: 28px;
+  color: rgb(119, 39, 194);
+}
+
+.todo-app__info {
+  font-size: 32px;
+  color: rgb(147, 58, 231);
+  margin: 50px 0 0;
 }

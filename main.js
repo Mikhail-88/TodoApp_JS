@@ -15,11 +15,7 @@ function createTodoApp(element, todos = []) {
       <form class='todo-app__form'>
         <input type='text' class='todo-app__field'>
       </form>
-
-      <ul class='todo-app__list'>
-        
-      </ul>
-
+      <ul class='todo-app__list'></ul>
       <p class='todo-app__info'>Items left 0 of 0</p>
     </div>
   `;
@@ -31,7 +27,9 @@ function createTodoApp(element, todos = []) {
 
   formElem.addEventListener('submit', (e) => {
     e.preventDefault();
+
     addTodo(fieldElem.value);
+
     fieldElem.value = '';
   });
 
@@ -63,7 +61,7 @@ function createTodoApp(element, todos = []) {
 
   function updateInfo() {
     const unfinishedTodos = todos.filter(todo => !todo.completed);
-    
+
     infoElem.innerHTML = `Items left ${unfinishedTodos.length} of ${todos.length}`;
   }
 
@@ -91,5 +89,4 @@ function createTodoApp(element, todos = []) {
     </li>
   `;
   }
-
 }
